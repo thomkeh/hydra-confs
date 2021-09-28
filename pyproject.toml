@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "hydra_confs"
+version = "1.0.0.dev0"
+description = "Configuration classes for hydra."
+authors = ["PAL <info@predictive-analytics-lab.com>"]
+license = "Apache License 2.0"
+packages = [
+  { include = "hydra_confs" },
+]
+include=["hydra_confs/py.typed"]
+classifiers=[
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+keywords=["typing", "python"]
+repository="https://github.com/thomkeh/hydra_confs"
+readme="README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+torch = { version = "^1.8", optional = true }
+pytorch-lightning = {version ="^1.4.2", optional= true}
+hydra-core = {version = "^1.1.0", optional = true}
+
+[tool.poetry.extras]
+tests = ["pytorch-lightning", "torch", "hydra-core"]
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+mypy = "^0.800"
+pytest = "^6.2.2"
+isort = "^5.7.0"
+neoconfigen = "^2.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
