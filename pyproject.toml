@@ -17,7 +17,7 @@ classifiers=[
   "Typing :: Typed",
 ]
 keywords=["typing", "python"]
-repository="https://github.com/thomkeh/hydra_confs"
+repository="https://github.com/thomkeh/hydra-confs"
 readme="README.md"
 
 [tool.poetry.dependencies]
